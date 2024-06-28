@@ -35,7 +35,7 @@ ArtVista Gallery
 <li>Backend:Nodejs,Expressjs</li>
 <li>Database:MongoDB</li>
 <li>Payment Integration:Stripe</li>
-
+<li>Image Storage:Multer</li>
 
 
 ## API DOCUMENTATION
