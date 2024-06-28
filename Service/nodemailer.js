@@ -18,7 +18,7 @@ export const admin = async (user, token, res) => {
     text:
       "You are receiving this because you (or someone else) have requested to be as an admin .\n\n" +
       "Please click on the following link, or paste this into your browser to complete the process:\n\n" +
-      `http://localhost:3000/admin-bio/${user._id}/${token}`,
+      `https://artvista-galleryfrontend-mathi-qr6lz3ok1-mathivathanas-projects.vercel.app/admin-bio/${user._id}/${token}`,
   };
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
