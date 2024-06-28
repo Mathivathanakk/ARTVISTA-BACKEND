@@ -149,7 +149,12 @@ export const adminactivate=async(req,res)=>{
     if(!hashed){
       return res.status(400).json({message:"Invalid Token"})
     }
-    const user=await User.findByIdAndUpdate(id,{username,bio,portfolio})
+    const user=await User.findByIdAndUpdate(id,{$set:{
+username:req.body.username,
+bio:req.body.bio,
+portfolio:req.body.portfolio
+
+    }},{new:true})
     user.isAdmin=true
     await user.save()
     res.status(200).json({message:'admin loggined successfully',data:user})
